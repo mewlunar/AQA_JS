@@ -18,55 +18,32 @@ for (let i = 0; i < str.length; i++) {
 console.log(
 	`word contains vowels ${vowelCount} and ${consonantsCount} consonants`
 )
-console.log()
+
 /*
 Написать программу, которая видоизменяет принимаемое слово (переменная со словом) шифром ЦЕЗАРЯ (посмотреть в википедии) со сдвигом на 1 в любую из сторон. 
 Направление шифрования задается переменной offset, которая может быть +1 и -1.
 */
-const alphabet = [
-	'a',
-	'b',
-	'c',
-	'd',
-	'e',
-	'f',
-	'g',
-	'h',
-	'i',
-	'j',
-	'k',
-	'l',
-	'm',
-	'n',
-	'o',
-	'p',
-	'q',
-	'r',
-	's',
-	't',
-	'u',
-	'v',
-	'w',
-	'x',
-	'y',
-	'z',
-]
-const input = 'AaA'
+const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+let input = 'A1 a 2A'
 const shift = -1
 let result = ''
 for (let i = 0; i < input.length; i++) {
-	let index = alphabet.indexOf(input[i].toLowerCase())
-	let index_2 = index + shift
-	if (index === alphabet.length - 1 && shift > 0) {
-		index_2 = 0
-	}
-	if (index === 0 && shift < 0) {
-		index_2 = alphabet.length - 1
-	}
-	if (input[i] !== alphabet[index]) {
-		result += alphabet[index_2].toUpperCase()
+	if (alphabet.indexOf(input[i].toLowerCase()) === -1) {
+		result += input[i]
 	} else {
-		result += alphabet[index_2]
+		let index = alphabet.indexOf(input[i].toLowerCase())
+		let index_2 = index + shift
+		if (index === alphabet.length - 1 && shift > 0) {
+			index_2 = 0
+		}
+		if (index === 0 && shift < 0) {
+			index_2 = alphabet.length - 1
+		}
+		if (input[i] !== alphabet[index]) {
+			result += alphabet[index_2].toUpperCase()
+		} else {
+			result += alphabet[index_2]
+		}
 	}
 }
 console.log(result)
