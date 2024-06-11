@@ -14,7 +14,7 @@ function getEmployeeInfo(pizza) {
 		'hawai',
 	]
 	let unique = []
-	for (let i = 1; i < pizza.length; i++) {
+	for (let i = 0; i < pizza.length; i++) {
 		if (competitorPizzas.indexOf(pizza[i]) === -1) {
 			unique.push(pizza[i])
 		}
