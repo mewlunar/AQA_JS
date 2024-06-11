@@ -47,13 +47,10 @@ function moreLetters(string) {
 	for (let i = 0; i < string.length; i++) {
 		if (string[i].length > maxLengthWord) {
 			maxLengthWord = string[i].length
-		}
-	}
-	for (let i = 0; i < string.length; i++) {
-		if (string[i].length === maxLengthWord) {
-			arr.push(string[i])
-		}
-	}
+			arr = [string[i]]
+		} else if (string[i].length === maxLengthWord) {
+		    arr.push(string[i])
+	     }
 	return arr.join(' ')
 }
 
