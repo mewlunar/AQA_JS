@@ -11,14 +11,9 @@
 function getEmployeeInfo(name) {
 	const nameArr = ['Татьяна', 'Евгений', 'Георгий', 'Анна', 'Оксана']
 	const salaryArr = [1500, 10000, 2000, 1200, 5000]
-	const index = nameArr.indexOf(name)
-	let nameSalaryArr = []
-	nameSalaryArr.push(nameArr[index], salaryArr[index])
-	if (nameArr.indexOf(name) != -1) {
-		return nameSalaryArr
-	} else {
-		return null
-	}
+	const index = nameArr.indexOf(name);
+        if (index === -1) return null;
+        return [nameArr[index], salaryArr[index]];
 }
 const name = 'Татьяна'
 console.log(getEmployeeInfo(name))
