@@ -19,11 +19,7 @@ function getEmployeeInfo(pizza) {
 			unique.push(pizza[i])
 		}
 	}
-	if (unique.length > 0) {
-		return unique
-	} else {
-		return null
-	}
+	return unique.length > 0 ? unique : null;
 }
 
 const myPizzas = [
