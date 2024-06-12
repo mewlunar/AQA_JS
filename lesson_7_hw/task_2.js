@@ -53,7 +53,7 @@ function sortString(array) {
 function vowelCount(string) {
 	const vowels = 'aeijouy'
 	let count = 0
-	for (symbol of string) {
+	for (const symbol of string) {
 		if (vowels.indexOf(symbol.toLowerCase()) != -1) {
 			count++
 		}
