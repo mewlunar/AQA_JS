@@ -45,18 +45,15 @@ console.log(`Итого: ${amount} $, средняя цена товара ${ave
 //   Массив должен быть отсортирован по возврастанию количества гласных букв в слове.
 
 function sortString(array) {
-	let tempArray = [...array]
-	tempArray.sort(function (a, b) {
+	return [...array].sort(function (a, b) {
 		return vowelCount(a) - vowelCount(b)
 	})
-
-	return tempArray
 }
 
 function vowelCount(string) {
 	const vowels = 'aeijouy'
 	let count = 0
-	for (symbol of string) {
+	for (const symbol of string) {
 		if (vowels.indexOf(symbol.toLowerCase()) != -1) {
 			count++
 		}
