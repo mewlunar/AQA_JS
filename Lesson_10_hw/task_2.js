@@ -36,7 +36,7 @@ Promise.allSettled([promise1, promise2]).then((values) => {
   console.log(values);
 });
 
-async function PromisesWithAll() {
+async function promisesWithAll() {
   try {
     const [promise1Result, promise2Result] = await Promise.all([
       promise1,
