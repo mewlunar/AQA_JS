@@ -2,9 +2,7 @@
 //     Функция должна исполнить колбэк строго через переданное количество миллисекунд
 //     Пример: delay(() => console.log('hello'), 2000) // Через 2 секунды в консоли появится слово hello
 function delay(callback, time) {
-  return setTimeout(() => {
-    callback();
-  }, time);
+  return setTimeout(callback, time);
 }
 
 delay(() => console.log("hello"), 5000);
