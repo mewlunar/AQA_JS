@@ -66,8 +66,8 @@ async function PromisesWithAllSettled() {
   }
 }
 
-PromisesWithAll();
-PromisesWithAllSettled();
+promisesWithAll();
+promisesWithAllSettled();
 
 // 3. Напишите функцию, которая возвращает Promise, который резолвается в сумму двух чисел.
 //   Функция должна принимать два аргумента (a и b) и возвращать Promise, который резолвает в a+b.
