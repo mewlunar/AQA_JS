@@ -49,7 +49,7 @@ async function promisesWithAll() {
   }
 }
 
-async function PromisesWithAllSettled() {
+async function promisesWithAllSettled() {
   try {
     const results = await Promise.allSettled([promise1, promise2]);
     results.forEach((result) => {
