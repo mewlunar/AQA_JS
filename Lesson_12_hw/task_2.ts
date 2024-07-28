@@ -11,7 +11,7 @@ function map<T, U>(
 ): U[] {
   const result: U[] = [];
   for (let i = 0; i < array.length; i++) {
-    result.push(callback(array[i], i));
+    result.push(callback(array[i], i, array));
   }
   return result;
 }
